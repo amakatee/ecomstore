@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%; 
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+
+}
+
+
+.shopping-cart, .search-icon {
+  width: 15px;
+  height: 20px;
+  color: white;
+}
+
+.shopping-cart {
+  position: relative;
+
+}
+.shopping-cart p {
+  position: absolute;
+  font-size: .6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -28%);
+
+}
+
+.billboard {
+   position: absolute;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   overscroll-behavior: none;
+   
+}
