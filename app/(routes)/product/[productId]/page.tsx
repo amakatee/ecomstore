@@ -29,7 +29,7 @@ export default async function ProductPage ({params} : ProductPageProps) {
                 <div className='lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8'>
                 <div className=' bg-[blue] h-[75vh]'>
                     
-                    {product.images.map(img => <img src={img.url} className="object-cover overflow-hidden h-[75vh] w-[100vw]" />)}
+                    {product.images.map(img => <img key={img.url} src={img.url} alt="img" className="object-cover overflow-hidden h-[75vh] w-[100vw]" />)}
                     
                 </div>
                 <div className=' sm:mt-16 sm:px-0 lg:mt-0 bg-[pink]'>
