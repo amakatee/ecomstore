@@ -12,8 +12,12 @@ import {Category, BillBoard, Product} from '../../types'
  //
 const URL=`${process.env.NEXT_PUBLIC_API_URL}/billboards`;
 
-export const getBillboard = async (id: string): Promise<BillBoard> => {
+const getBillboard = async (id: string): Promise<BillBoard> => {
   const res = await fetch(`${URL}/${id}`);
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
 
   return res.json();
 };
