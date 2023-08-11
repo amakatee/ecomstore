@@ -28,7 +28,7 @@ const getBillboard = async (id: string): Promise<BillBoard> => {
 export default async function HomePage() {
   // const categories = await getCategories()
 
-  const billboard = await getBillboard("d8af523f-6696-4357-9fd4-52ee9946e190")
+  // const billboard = await getBillboard("d8af523f-6696-4357-9fd4-52ee9946e190")
   // const products = await getProducts({isFeatured: true})
   // console.log(products)
  
@@ -37,7 +37,7 @@ export default async function HomePage() {
     <Navbar categories={[] as Category[]} />
       <main className=" top-0 left-0 w-[100vw] h-[100vh] z-[-1] ">
          <div className="billboard">
-            <Billboard data={billboard} />
+            <Billboard data={{ id: "231",label: "newew", imageUrl: "sjcdjsha"} }/>
           </div>
           
       </main>
