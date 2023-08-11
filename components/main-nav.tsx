@@ -19,8 +19,8 @@ export const MainNav: React.FC<MainNavProps> = ({ data }) => {
     }))
     return <div className='flex justify-between'>
         <div className='flex flex-col gap-1 burger-menu'>
-            <span className='w-[35px] h-[1.5px] bg-[white]'></span>
-            <span className='w-[35px] h-[1.5px] bg-[white]'></span>
+            <span className='w-[35px] h-[1.5px] bg-[black]'></span>
+            <span className='w-[35px] h-[1.5px] bg-[black]'></span>
         </div>
         {/* {routes.map(route => (
     
