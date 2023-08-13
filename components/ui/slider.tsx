@@ -46,43 +46,15 @@ export const ImagesSlider: React.FC<SliderProps> = ({images}) => {
         //speed={800}
         //direction="vertical"
         onSlideChange={() => console.log("slide chnaged")}
-         >{images.map(img =>  <SwiperSlide key={img.id}>
-            <Image width={400} height={550}   src={img.url} alt="img" className="object-cover overflow-hidden h-[75vh] w-[100vw]" />)
+         >
+           {images.map(img =>  <SwiperSlide key={img.id}>
+            <Image width={400} height={550}   src={img.url} alt="img" 
+            className="object-cover overflow-hidden h-[75vh] w-[100vw]" />
           </SwiperSlide> )}
-        </Swiper>;
+
+        </Swiper>
            
-        {/* <Swiper
-            className='gallery'
-     
-            // modules={[Navigation]}
-        
-          //  effect
-            // slidesPerView={1}
-            // pagination={{
-            //   el: '.swatch',
-            //   clickable:true,
-            //   renderBullet:(index,className ) => {
-            //     return  
-            //      `<span className="`+ className + ">" +(index+1)+`</span>`
-            //   }
-            // }}
-             loop
-            speed={800}
-            direction="vertical"
-            // onSlideChange={() => console.log("slide chane")}
-            // onSwiper={(swiper) => console.log(swiper)}
-            
-
-            >
-                 {images.map(img =>  <SwiperSlide>
-                     <div  key={img.url}>
-                      <img src={img.url} alt="img" className="object-cover overflow-hidden h-[75vh] w-[100vw]" />)
-                     </div>
-
-                 </SwiperSlide> )}
-           
-
-            </Swiper> */}
+       
 
     </div>
 }
