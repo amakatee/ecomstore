@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/navbar"
 import { Footer } from "../../components/footer"
 import { Container } from "@/components/ui/container"
-
+import { ToastProvider } from "@/providers/toast-provider"
 import getCategories from "@/actions/get-categories"
 import { Billboard } from "@/components/billboard"
 import getBillboard from "@/actions/get-billboards"
@@ -22,6 +22,7 @@ export default async function HomePage() {
  
   return (
     <>
+     <ToastProvider />
     <Navbar categories={categories} />
       <main className=" top-0 left-0 w-[100vw] h-[100vh] z-[-1] ">
          <div className="billboard">
