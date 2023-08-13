@@ -39,6 +39,10 @@ export default async function ProductPage ({params} : ProductPageProps) {
                     <div className='text-sm font-bold tracking-wider'>
                        <Currency value={product.price} />
                     </div>
+
+                    <div className='mb-30'>
+                        {product.description}
+                    </div>
                     <div className='py-10'>
                     <Button>
                        Add To Cart
