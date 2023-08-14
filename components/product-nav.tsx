@@ -24,7 +24,7 @@ const ProductNavbar = () => {
   return ( 
    
     <div className="flex justify-between content-center px-6 pt-5 w-[100vw] fixed z-10">
-         <Button onClick={() => router.push('/products')}>
+         <Button onClick={() => router.push('/categories')}>
          <div className="s w-[1.1rem] h-[1.1rem]">
         <svg viewBox="0 0 19 15" fill="black" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M7.647.146l.707.708L2.207 7H19v1H2.207l6.147 6.146-.707.708L.293 7.5 7.647.146z"></path>

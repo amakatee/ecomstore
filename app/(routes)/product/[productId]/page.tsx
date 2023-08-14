@@ -8,6 +8,7 @@ import { ImagesSlider } from '@/components/ui/slider'
 import Button from '../../../../components/ui/button'
 import {Currency} from '../../../../components/ui/currency'
 import ProductNavbar from '../../../../components/product-nav'
+import { ProductDescription } from '@/components/product-description'
 interface ProductPageProps {
     params: {
         productId: string
@@ -34,7 +35,8 @@ export default async function ProductPage ({params} : ProductPageProps) {
                 <div className=' h-[75vh]'>
                     <ImagesSlider  images={product.images}/>
                  </div>
-                <div className='flex flex-col gap-3 px-5 mt-6 lg:mt-0'>
+                 <ProductDescription product={product} />
+                {/* <div className='flex flex-col gap-3 px-5 mt-6 lg:mt-0'>
                    <div className='flex flex-col gap-2'>
                      <div className='block font-semibold leading-3 tracking-wider uppercase border-box'>
                         <h1>{product.name}</h1>
@@ -55,7 +57,6 @@ export default async function ProductPage ({params} : ProductPageProps) {
                     <p className='text-xs font-bold uppercase '>color:</p>
                         <div className='flex flex-col justify-center gap-1' >
                             <span style={{ backgroundColor: product?.color?.value }} className={` w-[20px] h-[20px] rounded-full `}></span>
-                            <p className='text-xs font-bold uppercase '>{product.color.name}</p>
                         </div>
                     </div>
 
@@ -70,12 +71,12 @@ export default async function ProductPage ({params} : ProductPageProps) {
                     </div>
                     <div className='flex justify-center w-[100%] my-10 '>
                     <button className='border border-black w-[100%] py-3 cursor-pointers'>
-                       <p className='text-xs uppercase fomt-semibold'>Add To Cart</p>
+                       <p className='text-xs font-bold uppercase'>Add To Cart</p>
                    </button>
                     </div>
                     
                    
-                </div>
+                </div> */}
                
                
                 </div>
