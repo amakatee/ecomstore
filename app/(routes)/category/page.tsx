@@ -27,7 +27,7 @@ const CategoryAll= async () => {
     <CategoryFilter categories={categories} products={allProducts}  />
     <div className='grid grid-cols-2'>
       {allProducts.length === 0 && <Noresult />}
-      {allProducts.map(product => <ProductCard data={product} />)}
+      {allProducts.map(product => <ProductCard key={product.id} data={product} />)}
 
 
     </div>

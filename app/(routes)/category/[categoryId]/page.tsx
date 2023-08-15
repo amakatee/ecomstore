@@ -56,7 +56,7 @@ export const ProductGrid = ({products} : GridProps) => {
   return (
     <div className='grid grid-cols-2'>
       {products.length === 0 && <Noresult />}
-      {products.map(product => <ProductCard data={product} />)}
+      {products.map(product => <ProductCard key={product.id} data={product} />)}
     </div>
   )
 
