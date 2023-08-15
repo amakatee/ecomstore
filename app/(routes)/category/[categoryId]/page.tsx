@@ -11,6 +11,7 @@ import getColors from '@/actions/get-colors'
 import getCategory from '@/actions/get-category'
 import { Noresult } from '@/components/no-result'
 import getAllProducts from '@/actions/get-all-products'
+import {ProductGrid} from '../components/product-grid'
 
 interface CategoryPageProps {
   params: {
@@ -48,16 +49,3 @@ const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
 
 export default CategoryPage
 
-interface GridProps {
-  products: Product[]
-}
-
-export const ProductGrid = ({products} : GridProps) => {
-  return (
-    <div className='grid grid-cols-2'>
-      {products.length === 0 && <Noresult />}
-      {products.map(product => <ProductCard key={product.id} data={product} />)}
-    </div>
-  )
-
-}
