@@ -15,7 +15,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data}) => {
     router.push(`/product/${data.id}`)
   }
     console.log(data)
-    return <div onClick={handleRedirect} className="mb-6">
+    return <div onClick={handleRedirect} className="mb-6 cursor-pointer">
         <div className=" aspect-[3/4.5] ">
         <Image
         className="w-[100%] h-[100%] object-cover" src={data.images[0].url}

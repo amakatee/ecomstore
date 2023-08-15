@@ -25,7 +25,7 @@ const CategoryFilter: React.FC<FilterProps> = ({categories, products}) => {
     <Link
     href={'/category'}
     className={cn(
-      "text-xs font-bold uppercase transition-colors hover:text-black", 
+      "text-xs font-bold uppercase transition-colors hover:text-black cursor-pointer", 
       pathname === '/category' ? "text-black": "text-neutral-500"
    )}
     >
@@ -37,7 +37,7 @@ const CategoryFilter: React.FC<FilterProps> = ({categories, products}) => {
             key={route.href}
             href={route.href}
             className={cn(
-                "text-xs font-bold uppercase transition-colors hover:text-black", 
+                "text-xs cursor-pointer font-bold uppercase transition-colors hover:text-black", 
                 route.active ? "text-black": "text-neutral-500"
             )}
             >

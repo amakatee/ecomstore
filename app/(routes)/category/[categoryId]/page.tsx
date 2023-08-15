@@ -37,14 +37,27 @@ const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
     <>
     <Navbar categories={categories}  />
     <CategoryFilter categories={categories} products={allProducts}  />
-    <div className='grid grid-cols-2'>
-      {products.length === 0 && <Noresult />}
-      {products.map(product => <ProductCard data={product} />)}
+
+     <ProductGrid products={products} />
 
 
-    </div>
+  
     </>
   )
 }
 
 export default CategoryPage
+
+interface GridProps {
+  products: Product[]
+}
+
+export const ProductGrid = ({products} : GridProps) => {
+  return (
+    <div className='grid grid-cols-2'>
+      {products.length === 0 && <Noresult />}
+      {products.map(product => <ProductCard data={product} />)}
+    </div>
+  )
+
+}
