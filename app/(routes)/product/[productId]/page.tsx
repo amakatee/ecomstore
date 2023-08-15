@@ -18,6 +18,7 @@ interface ProductPageProps {
 export default async function ProductPage ({params} : ProductPageProps) {
 
     const product  = await getProduct(params.productId)
+    console.log(product)
     // const suggestedProducts = await getProducts({
     //     categoryId: product.category.id
     // })
@@ -28,7 +29,8 @@ export default async function ProductPage ({params} : ProductPageProps) {
     
     
     return <div className='min-h-[100vh]'>
-        <ProductNavbar />
+    
+        <ProductNavbar categoryId={product.categoryId} />
         <Container>
             <div className=' sm:px-6 lg:px-8'>
                 <div className='lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8'>

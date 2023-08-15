@@ -2,8 +2,9 @@ import getCategories from '@/actions/get-categories'
 import { Navbar } from '@/components/navbar'
 import ProductNavbar from '@/components/product-nav'
 import { Category, Product, Size, Color } from '@/types'
-import CategoryFilter from '../components/category-filter'
+// import CategoryFilter from '@/components/category-filter'
 import React from 'react'
+import CategoryFilter from './components/category-filter'
 import getProducts from '@/actions/get-products'
 import { ProductCard } from '@/components/ui/product-card'
 import getSize from '@/actions/get-sizes'
@@ -12,23 +13,10 @@ import getCategory from '@/actions/get-category'
 import { Noresult } from '@/components/no-result'
 import getAllProducts from '@/actions/get-all-products'
 
-interface CategoryPageProps {
-  params: {
-    categoryId: string
-  },
-  searchParams: {
-    colorId: string,
-    sizeId: string
 
-  }
-}
-const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
+const CategoryAll= async () => {
     const categories: Category[] = await getCategories() 
-    const products: Product[] = await getProducts({
-      categoryId: params.categoryId,
-      colorId: searchParams.colorId,
-      sizeId: searchParams.sizeId
-    })
+  
     const allProducts: Product[] = await getAllProducts()
     // const sizes: Size[] = await getSize()
     // const colors: Color[] = await getColors()
@@ -38,8 +26,8 @@ const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
     <Navbar categories={categories}  />
     <CategoryFilter categories={categories} products={allProducts}  />
     <div className='grid grid-cols-2'>
-      {products.length === 0 && <Noresult />}
-      {products.map(product => <ProductCard data={product} />)}
+      {allProducts.length === 0 && <Noresult />}
+      {allProducts.map(product => <ProductCard data={product} />)}
 
 
     </div>
@@ -47,4 +35,4 @@ const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
   )
 }
 
-export default CategoryPage
+export default CategoryAll

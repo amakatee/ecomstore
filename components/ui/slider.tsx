@@ -43,7 +43,7 @@ export const ImagesSlider: React.FC<SliderProps> = ({images}) => {
         loop={true} 
         // effect
         //  slidesPerView={1}
-        //speed={800}
+        speed={800}
         //direction="vertical"
         onSlideChange={() => console.log("slide chnaged")}
          >
