@@ -1,5 +1,5 @@
 import { BillBoard as BillboardType } from "@/types";
-
+import Link from 'next/link'
 interface BillboardProps {
     data: BillboardType
 }
@@ -12,11 +12,14 @@ export const Billboard: React.FC<BillboardProps> = ({data}) => {
              style={{backgroundImage: `url(${data?.imageUrl})`}}
               >
                 <div className="flex flex-col items-start justify-center w-full h-full gap-3 p-10 ">
-                    <div className="text-2xl font-bold text-black uppercase pt-60">
+                <Link href='/category'>
+                <div className="text-2xl font-bold text-black uppercase pt-60">
+                  {data.label}
+                </div>
 
-                        {data.label}
- 
-                    </div>
+                </Link>
+                   
+                    
                     <div className="w-[4rem]">
                     <svg viewBox="0 0 44 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd" d="M0 5.5H43V6.5H0V5.5Z" fill="black"></path>
