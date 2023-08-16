@@ -7,11 +7,10 @@ import React from 'react'
 import CategoryFilter from './components/category-filter'
 import getProducts from '@/actions/get-products'
 import { ProductCard } from '@/components/ui/product-card'
-import getSize from '@/actions/get-sizes'
-import getColors from '@/actions/get-colors'
-import getCategory from '@/actions/get-category'
 import { Noresult } from '@/components/no-result'
 import getAllProducts from '@/actions/get-all-products'
+
+export const revalidate = 0
 
 
 const CategoryAll= async () => {

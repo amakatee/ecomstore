@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { Container } from "./ui/container"
 import { MainNav } from "./main-nav"
@@ -5,11 +6,18 @@ import {Product} from '../types'
 import NavbarActions from '../components/navbar-actions'
 
 import {Currency} from '../components/ui/currency'
+import useCart from "@/hooks/use-cart"
 interface ProductProps  {
     product: Product
 }
 
 export const ProductDescription =  ({product} : ProductProps) => {
+    const cart = useCart()
+    const onAddToCart = () => {
+        cart.addItem(product)
+        console.log(cart.items)
+
+    }
     return (
         <div className='flex flex-col gap-3 px-5 mt-6 lg:mt-0'>
         <div className='flex flex-col gap-2'>
@@ -46,8 +54,8 @@ export const ProductDescription =  ({product} : ProductProps) => {
 
          </div>
          <div className='flex justify-center w-[100%] my-10 '>
-         <button className='border border-black w-[100%] py-3 cursor-pointers'>
-            <p className='text-xs font-bold uppercase'>Add To Cart</p>
+         <button  className='border border-black w-[100%] py-3 cursor-pointers'>
+            <p onClick={onAddToCart} className='text-xs font-bold uppercase'>Add To Cart</p>
         </button>
          </div>
          
