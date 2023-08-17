@@ -1,4 +1,4 @@
-import Modal from "./ui/Modal"
+import Modal from '../components/ui/modal'
 import usePreviewModal from "@/hooks/use-preview-modal";
 import Image from "next/image";
 import { X } from 'lucide-react';
@@ -7,7 +7,7 @@ import { WindowCartIcon } from "./window-cart-item";
 
 export const ShoppingCart = () => {
     const previewModal = usePreviewModal();
-    
+     
 
     return  <Modal 
     open={previewModal.isOpen} 
