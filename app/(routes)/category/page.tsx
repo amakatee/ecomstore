@@ -9,6 +9,7 @@ import getProducts from '@/actions/get-products'
 import { ProductCard } from '@/components/ui/product-card'
 import { Noresult } from '@/components/no-result'
 import getAllProducts from '@/actions/get-all-products'
+import ModalProvider from '@/providers/modal-provider'
 
 export const revalidate = 0
 
@@ -22,6 +23,7 @@ const CategoryAll= async () => {
     // const category = getCategory(params.categoryId)
   return (
     <>
+    <ModalProvider />
     <Navbar categories={categories}  />
     <CategoryFilter categories={categories} products={allProducts}  />
     <div className='grid grid-cols-2'>

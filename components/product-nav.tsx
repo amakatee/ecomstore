@@ -6,13 +6,14 @@ import { useEffect, useState } from "react";
 
 import Button from "@/components/ui/button";
 import useCart from "@/hooks/use-cart";
-// import useCart from "@/hooks/use-cart";
+import usePreviewModal from "@/hooks/use-preview-modal";
 interface prodcutNavProps {
   categoryId: string
 }
 const ProductNavbar: React.FC<prodcutNavProps> = ({categoryId}) => {
   const [isMounted, setIsMounted] = useState(false);
   const cart = useCart()
+  const cartPreview = usePreviewModal()
 
   useEffect(() => {
     setIsMounted(true);
@@ -26,6 +27,12 @@ const ProductNavbar: React.FC<prodcutNavProps> = ({categoryId}) => {
   }
 
 
+  const onPreview: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
+
+    cartPreview.onOpen(cart.items);
+    console.log("hi", cart.items)
+  };
   return ( 
    
     <div className="flex justify-between content-center px-6 pt-5 w-[100vw] fixed z-10">
@@ -38,7 +45,7 @@ const ProductNavbar: React.FC<prodcutNavProps> = ({categoryId}) => {
         </div>
          </Button>
         
-        <Button onClick={() => router.push('/cart')}>
+        <Button onClick={onPreview}>
         <div className="shopping-cart">
             <p className="text-black">{cart.items.length}</p>
             <svg viewBox="0 0 18 26" fill="black" xmlns="http://www.w3.org/2000/svg">

@@ -9,6 +9,8 @@ import Button from '../../../../components/ui/button'
 import {Currency} from '../../../../components/ui/currency'
 import ProductNavbar from '../../../../components/product-nav'
 import { ProductDescription } from '@/components/product-description'
+import ModalProvider from '@/providers/modal-provider'
+
 interface ProductPageProps {
     params: {
         productId: string
@@ -29,7 +31,7 @@ export default async function ProductPage ({params} : ProductPageProps) {
     
     
     return <div className='min-h-[100vh]'>
-    
+        <ModalProvider />
         <ProductNavbar categoryId={product.categoryId} />
         <Container>
             <div className=' sm:px-6 lg:px-8'>

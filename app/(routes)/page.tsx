@@ -8,6 +8,7 @@ import getBillboard from "@/actions/get-billboards"
 import getProducts from "@/actions/get-products"
 import { ProductList } from "@/components/product-list"
 import {Category, BillBoard , Product} from '../../types'
+import ModalProvider from "@/providers/modal-provider"
 
 
 
@@ -21,7 +22,8 @@ export default async function HomePage() {
  
   return (
     <>
-     <ToastProvider />
+    <ModalProvider />
+    <ToastProvider />
     <Navbar categories={categories} />
       <main className=" top-0 left-0 w-[100vw] h-[100vh] z-[-1] ">
          <div className="billboard">
