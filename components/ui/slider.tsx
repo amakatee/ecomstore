@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import  {Swiper, SwiperSlide, } from 'swiper/react'
 import {  SwiperRef, SwiperClass, SwiperProps } from "swiper/react"
 import SwiperCore from "swiper"
@@ -29,12 +29,12 @@ export const ImagesSlider: React.FC<SliderProps> = ({images}) => {
      const swiperElRef = useRef<SwiperRef>(null);
 
      
-     useEffect(() => {
-        instance?.slideTo(2)
-        // ref usage
+    //  useEffect(() => {
+    //     instance?.slideTo(2)
+    //     // ref usage
      
-        console.log(swiperElRef.current?.swiper.activeIndex);
-      }, [])
+    //     console.log(swiperElRef.current?.swiper.activeIndex);
+    //   }, [])
 
     return <div className=''>
         <Swiper ref={swiperElRef} 

@@ -20,7 +20,7 @@ export const ShoppingCart = () => {
 
       <div className="flex flex-col gap-5 overflow-scroll">
       {previewModal.data?.map(item => (
-       <WindowCartIcon item={item} />
+       <WindowCartIcon key={item.id} item={item} />
       ))}
       </div>
 
