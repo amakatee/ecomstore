@@ -54,7 +54,7 @@ export const ProductDescription =  ({product} : ProductProps) => {
 
          </div>
          <div className='flex justify-center w-[100%] my-10 '>
-         <button  className='border border-black w-[100%] py-3 cursor-pointers'>
+         <button  className='border border-black w-[100%] py-4 cursor-pointers'>
             <p onClick={onAddToCart} className='text-xs font-bold uppercase'>Add To Cart</p>
         </button>
          </div>

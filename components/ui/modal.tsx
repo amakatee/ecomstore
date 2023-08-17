@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({
                 <div className="relative flex items-center h-[100vh] w-full px-4 pb-8 overflow-hidden bg-white shadow-2xl pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
                   <div className="absolute right-4 top-4">
                       {/* <button  onClick={onClose} > <X /></button> */}
-                      <X   onClick={onClose} size={18} strokeWidth={1.2} />
+                      <X   onClick={onClose} size={28} strokeWidth={1.2} />
                   </div>
                   {children}
                 </div> 
