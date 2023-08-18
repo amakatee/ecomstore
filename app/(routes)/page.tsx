@@ -14,7 +14,7 @@ import ModalProvider from "@/providers/modal-provider"
 
 export default async function HomePage() {
   const categories: Category[] = await getCategories()
-  const billboard: BillBoard = await getBillboard("76f1cd7d-36b3-4967-9235-fda6bbd844d1")
+  const billboard: BillBoard = await getBillboard("7e2d47a1-e60b-46c7-86ec-c6ce154edc76")
   const products: Product[] = await getProducts({isFeatured:true})
 
   console.log(billboard)
