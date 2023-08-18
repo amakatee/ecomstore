@@ -7,7 +7,7 @@ interface BillboardProps {
 export const Billboard: React.FC<BillboardProps> = ({data}) => {
     return (
         <div className="">
-            <div
+            {/* <div
              className="h-[100vh] w-[100vw]"
              style={{backgroundImage: `url(${data?.imageUrl})`}}
               >
@@ -27,7 +27,8 @@ export const Billboard: React.FC<BillboardProps> = ({data}) => {
                     
                 </div>
   
-             </div>
+             </div> */}
+             bb
         </div>
     )
 }
