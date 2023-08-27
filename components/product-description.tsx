@@ -19,17 +19,17 @@ export const ProductDescription =  ({product} : ProductProps) => {
 
     }
     return (
-        <div className='flex flex-col gap-3 px-5 mt-6 lg:mt-0'>
+        <div className='flex flex-col gap-3 px-5 mt-6 lg:mt-0 '>
         <div className='flex flex-col gap-2'>
-          <div className='block font-semibold leading-3 tracking-wider uppercase border-box'>
+          <div className='leading-3 tracking-widest uppercase border-box'>
              <h1>{product.name}</h1>
          </div>
-         <div className='mb-3 text-sm font-bold tracking-wider'>
+         <div className='mb-3 text-sm tracking-widest'>
             <Currency value={product.price} />
          </div>
         </div>
 
-         <div className='pb-5 text-xs font-bold tracking-wide'>
+         <div className='pb-5 text-xs tracking-widest'>
              {product.description}
          </div>
 
@@ -55,7 +55,7 @@ export const ProductDescription =  ({product} : ProductProps) => {
          </div>
          <div className='flex justify-center w-[100%] my-10 '>
          <button  className='border border-black w-[100%] py-4 cursor-pointers'>
-            <p onClick={onAddToCart} className='text-xs font-bold uppercase'>Add To Cart</p>
+            <p onClick={onAddToCart} className='text-sm tracking-widest uppercase'>Add To Cart</p>
         </button>
          </div>
          

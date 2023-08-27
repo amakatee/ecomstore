@@ -15,7 +15,7 @@ export const Navbar =  ({categories} : NavProps) => {
                     <div className="flex items-center justify-between w-[100vw] px-7 ">
                         <MainNav data={categories} />
                         <Link href="/" className="">
-                          <span className="text-xl tracking-wider text-black uppercase">Store</span>
+                          <span className="text-xl uppercase ext-black f">Store</span>
                         </Link>
                     <NavbarActions />
                     </div>
