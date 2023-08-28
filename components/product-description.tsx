@@ -37,7 +37,7 @@ export const ProductDescription =  ({product} : ProductProps) => {
          <div className='flex flex-col gap-8'>
          
          <div className='flex flex-col gap-3 '>
-         <p className='text-xs font-bold uppercase '>color:</p>
+         <p className='text-xs font-bold uppercase '>color: <span>{product.color.name}</span></p>
              <div className='flex flex-col justify-center gap-1' >
                  <span style={{ backgroundColor: product?.color?.value }} className={` w-[20px] h-[20px] rounded-full `}></span>
                  {/* <p className='text-xs font-bold uppercase '>{product.color.name}</p> */}
@@ -45,7 +45,7 @@ export const ProductDescription =  ({product} : ProductProps) => {
          </div>
 
          <div className='flex flex-col gap-3'>
-             <p className='text-xs font-bold uppercase'>size:</p>
+             <p className='text-xs font-bold uppercase'>size: <span>{product.size.value}</span></p>
              <div className='flex flex-col justify-center gap-1' >
 
                  <span className={`bg-[#fafafa] w-[20px] h-[30px] text-center `}> <p className='pt-[2px]'>{product.size.value}</p> </span>

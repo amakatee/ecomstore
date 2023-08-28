@@ -25,7 +25,7 @@ export const NavbarSideMenu = () => {
   
       </div>
       {routes.map(route => (
-          <div>
+          <div key={route.href}>
               <Link href={`${route.href}`}> <span className='uppercase'>{route.label}</span></Link>
           </div>
       ))}
