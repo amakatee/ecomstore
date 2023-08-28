@@ -31,7 +31,7 @@ const ProductNavbar: React.FC<prodcutNavProps> = ({categoryId}) => {
     event.stopPropagation();
 
     cartPreview.onOpen(cart.items);
-    console.log("hi", cart.items)
+
   };
   return ( 
    

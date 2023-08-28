@@ -12,6 +12,7 @@ import getCategory from '@/actions/get-category'
 import { Noresult } from '@/components/no-result'
 import getAllProducts from '@/actions/get-all-products'
 import {ProductGrid} from '../components/product-grid'
+import ModalProvider from '@/providers/modal-provider'
 
 interface CategoryPageProps {
   params: {
@@ -37,6 +38,7 @@ const CategoryPage= async ({params, searchParams}: CategoryPageProps) => {
   return (
     <>
     <Navbar categories={categories}  />
+    <ModalProvider />
     <CategoryFilter categories={categories} products={allProducts}  />
 
      <ProductGrid products={products} />
